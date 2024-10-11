@@ -1,7 +1,7 @@
 {
   "mappings": [
-    "/content/aem-eds-discover/:/",
-    "/content/aem-eds-discover/configuration:/.helix/config.json",
-    "/content/aem-eds-discover/metadata:/metadata.json"
+    "/content/aem-eds-discovery/:/",
+    "/content/aem-eds-discovery/configuration:/.helix/config.json",
+    "/content/aem-eds-discovery/metadata:/metadata.json"
   ]
 }
