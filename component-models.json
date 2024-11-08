@@ -222,6 +222,32 @@
         "value": "",
         "label": "Button",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "titleColour",
+        "value": "",
+        "label": "Title Colour",
+        "description": "Select the colour of the title",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Blue",
+            "value": "bg-blue"
+          },
+          {
+            "name": "Green",
+            "value": "bg-green"
+          },
+          {
+            "name": "Midnight blue",
+            "value": "bg-midnight-blue"
+          },
+          {
+            "name": "none",
+            "value": ""
+          }
+        ]
       }
     ]
   }
