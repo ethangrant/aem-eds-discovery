@@ -184,5 +184,45 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "desktopBackgroundImage",
+        "label": "Desktop Background Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mobileBackgroundImage",
+        "label": "Mobile Background Image",
+        "multi": false
+      },
+      {
+        "component": "title",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "button",
+        "value": "",
+        "label": "Button",
+        "valueType": "string"
+      }
+    ]
   }
 ]
