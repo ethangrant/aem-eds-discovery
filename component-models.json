@@ -203,6 +203,18 @@
         "multi": false
       },
       {
+        "component": "text",
+        "name": "background_desktopBackgroundImageAlt",
+        "label": "Desktop Background Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "background_mobileBackgroundImageAlt",
+        "label": "Mobile Background Image Alt",
+        "valueType": "string"
+      },
+      {
         "component": "title",
         "valueType": "string",
         "name": "text_title",
@@ -210,17 +222,36 @@
         "multi": false
       },
       {
-        "component": "text",
+        "component": "select",
+        "name": "titleType",
+        "value": "h2",
+        "label": "Title Type",
+        "valueType": "string",
+        "options": [
+          {"name": "h1", "value":"h1"},
+          {"name": "h2", "value":"h2"},
+          {"name": "h3", "value":"h3"},
+          {"name": "h4", "value":"h4"}
+        ]
+      },
+      {
+        "component": "select",
+        "name": "text_titleBackgroundColour",
+        "value": "green",
+        "valueType": "string",
+        "label": "Title Background Colour",
+        "options": [
+          {"name": "green", "value": "green-txt"},
+          {"name": "blue", "value": "blue-txt"},
+          {"name": "midnight-blue", "value": "midnight-blue-txt"},
+          {"name": "none", "value": ""}
+        ]
+      },
+      {
+        "component": "richtext",
         "name": "text_description",
         "value": "",
         "label": "Description",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "text_subtext",
-        "value": "",
-        "label": "Subtext",
         "valueType": "string"
       }
     ]
