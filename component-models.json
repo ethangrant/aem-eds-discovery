@@ -191,47 +191,36 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "desktopBackgroundImage",
+        "name": "background_desktopBackgroundImage",
         "label": "Desktop Background Image",
         "multi": false
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "mobileBackgroundImage",
+        "name": "background_mobileBackgroundImage",
         "label": "Mobile Background Image",
         "multi": false
       },
       {
         "component": "title",
         "valueType": "string",
-        "name": "title",
+        "name": "text_title",
         "label": "Title",
-        "multi": false,
-        "titleOptions": [
-          {
-            "name": "Blue",
-            "value": "bg-blue"
-          },
-          {
-            "name": "Green",
-            "value": "bg-green"
-          },
-          {
-            "name": "Midnight blue",
-            "value": "bg-midnight-blue"
-          },
-          {
-            "name": "none",
-            "value": ""
-          }
-        ]
+        "multi": false
       },
       {
-        "component": "richtext",
-        "name": "description",
+        "component": "text",
+        "name": "text_description",
         "value": "",
         "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_subtext",
+        "value": "",
+        "label": "Subtext",
         "valueType": "string"
       }
     ]
