@@ -262,19 +262,6 @@
       {
         "component": "text",
         "name": "text_button",
-        "label": "Button text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "text_button",
-        "label": "Button text",
-        "value": "Make an enquiry",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "text_button",
         "label": "Button URL",
         "value": "https://www.adobe.com",
         "valueType": "string"
