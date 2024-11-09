@@ -215,6 +215,11 @@
         "valueType": "string"
       },
       {
+        "component": "boolean",
+        "name": "background_showPixels",
+        "label": "Show Pixel Progression"
+      },
+      {
         "component": "title",
         "valueType": "string",
         "name": "text_title",
@@ -252,6 +257,40 @@
         "name": "text_description",
         "value": "",
         "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_button",
+        "label": "Button text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_button",
+        "label": "Button text",
+        "value": "Make an enquiry",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_button",
+        "label": "Button URL",
+        "value": "https://www.adobe.com",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_buttonText",
+        "label": "Button text",
+        "value": "Make an enquiry",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_buttonType",
+        "label": "Button Type",
+        "value": "primary",
         "valueType": "string"
       }
     ]
