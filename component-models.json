@@ -189,6 +189,23 @@
     "id": "banner",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Colour and Pixel Progression",
+        "description": "Set title background colour and pixel progression",
+        "valueType": "string",
+        "options": [
+          {"name": "Green with Pixels", "value": "green-txt green-pixels"},
+          {"name": "Blue with Pixels", "value": "blue-txt blue-pixels"},
+          {"name": "Midnight Blue with Pixels", "value": "midnight-blue-txt midnight-blue-pixels"},
+          {"name": "Green Pixels", "value": "green-pixels"},
+          {"name": "Blue Pixels", "value": "blue-pixels"},
+          {"name": "Midnight Blue Pixels", "value": "midnight-blue-pixels"},
+          {"name": "none", "value": ""}
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "background_desktopBackgroundImage",
@@ -237,19 +254,6 @@
           {"name": "h2", "value":"h2"},
           {"name": "h3", "value":"h3"},
           {"name": "h4", "value":"h4"}
-        ]
-      },
-      {
-        "component": "select",
-        "name": "text_titleBackgroundColour",
-        "value": "green",
-        "valueType": "string",
-        "label": "Title Background Colour",
-        "options": [
-          {"name": "green", "value": "green-txt"},
-          {"name": "blue", "value": "blue-txt"},
-          {"name": "midnight-blue", "value": "midnight-blue-txt"},
-          {"name": "none", "value": ""}
         ]
       },
       {
