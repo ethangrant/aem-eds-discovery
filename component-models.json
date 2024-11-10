@@ -196,9 +196,9 @@
         "description": "Set title background colour and pixel progression",
         "valueType": "string",
         "options": [
-          {"name": "Green with Pixels", "value": "green-txt green-pixels"},
-          {"name": "Blue with Pixels", "value": "blue-txt blue-pixels"},
-          {"name": "Midnight Blue with Pixels", "value": "midnight-blue-txt midnight-blue-pixels"},
+          {"name": "Green with Pixels", "value": "green-txt-pixels"},
+          {"name": "Blue with Pixels", "value": "blue-txt-pixels"},
+          {"name": "Midnight Blue with Pixels", "value": "midnight-blue-txt-pixels"},
           {"name": "Green Pixels", "value": "green-pixels"},
           {"name": "Blue Pixels", "value": "blue-pixels"},
           {"name": "Midnight Blue Pixels", "value": "midnight-blue-pixels"},
@@ -230,11 +230,6 @@
         "name": "background_mobileBackgroundImageAlt",
         "label": "Mobile Background Image Alt",
         "valueType": "string"
-      },
-      {
-        "component": "boolean",
-        "name": "background_showPixels",
-        "label": "Show Pixel Progression"
       },
       {
         "component": "title",
