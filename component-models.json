@@ -319,7 +319,7 @@
       },
       {
         "component": "text",
-        "name": "text_emailType",
+        "name": "buttons_emailType",
         "label": "Email Button Type",
         "value": "primary",
         "valueType": "string"
