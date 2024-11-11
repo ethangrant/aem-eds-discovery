@@ -280,5 +280,50 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "profile",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "avatar",
+        "label": "Profile picture",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "avatarAlt",
+        "label": "Profile picture Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Profile Description"
+      },
+      {
+        "component": "text",
+        "name": "buttons_email",
+        "label": "Email Address",
+        "value": "ethan@thepixel.com",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "buttons_emailText",
+        "label": "Email text",
+        "value": "Contact ",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "text_emailType",
+        "label": "Email Button Type",
+        "value": "primary",
+        "valueType": "string"
+      }
+    ]
   }
 ]
