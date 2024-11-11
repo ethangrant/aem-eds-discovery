@@ -1,3 +1,47 @@
-.test {
-  background-color: orange;
+.profile {
+  border-radius: 5px;
+  color: white;
+  display: flex;
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+
+  picture {
+    display: inline-block;
+    height: 126px;
+    width: 126px;
+    border-radius: 50%;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &> div {
+    align-content: center;
+    padding: 20px 30px;
+
+    &:last-child {
+      flex: 1;
+      text-align: right;
+    }
+  }
+
+  .button-container {
+    margin: 0;
+
+    a {
+      margin: 0;
+      min-width: 309px;
+    }
+  }
+
+  .button.secondary {
+    background-color: white;
+    border-radius: 5px;
+    height: 45px;
+    color: #051D3B;
+    border-color: white;
+  }
 }
