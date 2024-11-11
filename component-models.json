@@ -285,6 +285,19 @@
     "id": "profile",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "midnight-blue-bg",
+        "label": "Background Colour",
+        "description": "Set background colour of profile card",
+        "valueType": "string",
+        "options": [
+          {"name": "Green", "value": "green-bg"},
+          {"name": "Blue", "value": "blue-bg"},
+          {"name": "Midnight Blue", "value": "midnight-blue-bg"}
+        ]
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "avatar",
