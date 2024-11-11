@@ -304,25 +304,11 @@
         "label": "Profile Description"
       },
       {
-        "component": "text",
-        "name": "buttons_email",
-        "label": "Email Address",
-        "value": "ethan@thepixel.com",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "buttons_emailText",
-        "label": "Email text",
-        "value": "Contact ",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "buttons_emailType",
-        "label": "Email Button Type",
-        "value": "primary",
-        "valueType": "string"
+        "component": "richtext",
+        "valueType": "string",
+        "name": "buttons",
+        "label": "Profile Buttons",
+        "description": "Buttons are represented as paragraph separated links"
       }
     ]
   }
