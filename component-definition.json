@@ -234,8 +234,7 @@
                   "name": "Menu Item Level 2",
                   "model": "menu-item-level-2",
                   "link": "https://google.com/",
-                  "linkText": "Industries",
-                  "filter": "menu-item-level-2"
+                  "linkText": "Industries"
                 }
               }
             }
