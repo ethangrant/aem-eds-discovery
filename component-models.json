@@ -345,13 +345,7 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "left_dropdown-content-heading",
-        "label": "Dropdown Content Heading"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "left_dropdown-nav",
+        "name": "dropdown-nav",
         "label": "Dropdown Navigation"
       },
 
