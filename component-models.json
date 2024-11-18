@@ -345,8 +345,21 @@
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "menulinks",
-        "label": "Menu Links"
+        "name": "left_dropdown-content-heading",
+        "label": "Dropdown Content Heading"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "left_dropdown-nav",
+        "label": "Dropdown Navigation"
+      },
+
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "dropdown-content",
+        "label": "Dropdown Content"
       },
       {
         "component": "reference",
