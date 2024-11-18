@@ -343,5 +343,32 @@
         "value": "What we offer"
       }
     ]
+  },
+  {
+    "id": "menu-item-level-2",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Link URL",
+        "value": "https://google.com/"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Link Text",
+        "value": "Services"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "level-3-links",
+        "label": "Level 3 Links",
+        "description": "Paragraph separated bullet point lists"
+      }
+    ]
   }
+
 ]

@@ -47,5 +47,11 @@
     "components": [
       "menu-item-level-1"
     ]
+  },
+  {
+    "id": "menu-item-level-1",
+    "components": [
+      "menu-item-level-2"
+    ]
   }
 ]
