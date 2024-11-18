@@ -206,40 +206,22 @@
           }
         },
         {
-          "title": "Menu Item Level 1",
-          "id": "menu-item-level-1",
+          "title": "Menu Item",
+          "id": "menu-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Menu Item Level 1",
-                  "model": "menu-item-level-1",
+                  "name": "Menu Item",
+                  "model": "menu-item",
                   "link": "https://google.com/",
-                  "linkText": "What we offer",
-                  "filter": "menu-item-level-1"
+                  "linkText": "What we offer"
                 }
               }
             }
           }
         },
-        {
-          "title": "Menu Item Level 2",
-          "id": "menu-item-level-2",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Menu Item Level 2",
-                  "model": "menu-item-level-2",
-                  "link": "https://google.com/",
-                  "linkText": "Industries"
-                }
-              }
-            }
-          }
-        }
       ]
     }
   ]

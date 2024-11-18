@@ -326,7 +326,7 @@
     ]
   },
   {
-    "id": "menu-item-level-1",
+    "id": "menu-item",
     "fields": [
       {
         "component": "text",
@@ -341,34 +341,27 @@
         "name": "linkText",
         "label": "Top level Text",
         "value": "What we offer"
-      }
-    ]
-  },
-  {
-    "id": "menu-item-level-2",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "link",
-        "label": "Link URL",
-        "value": "https://google.com/"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "linkText",
-        "label": "Link Text",
-        "value": "Services"
       },
       {
         "component": "richtext",
         "valueType": "string",
-        "name": "level-3-links",
-        "label": "Level 3 Links",
-        "description": "Paragraph separated bullet point lists"
+        "name": "menulinks",
+        "label": "Menu Links"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "card_image",
+        "label": "Card Image",
+        "multi": "false"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "card_content",
+        "label": "Card Content",
+        "value": "Card content goes here!"
       }
     ]
   }
-
 ]
