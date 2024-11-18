@@ -267,3 +267,7 @@ main .section.highlight {
 .midnight-blue-bg {
   background-color: #051D3B;
 }
+
+.hidden {
+    display: none;
+}

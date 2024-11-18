@@ -111,14 +111,21 @@ export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const menuPath = navMeta ? new URL(navMeta, window.location).pathname : '/mega-menu';
+  const menuPath = navMeta ? new URL(navMeta, window.location).pathname : '/menu-block-test';
   const fragment = await loadFragment(navPath);
   const menuFragment = await loadFragment(menuPath)
 
   console.log(menuFragment);
 
   const nav = document.createElement('nav');
+  const navbar = document.createElement('ul');
   nav.id = 'nav'
+  navbar.classList = ['navbar-nav'];
+
+  const menuBlockChildren = menuFragment.querySelectorAll('.menu.block > div');
+
+
+
 
   // Remove default EDS button markup.
   const menuButtons = menuFragment.querySelectorAll('p > a');
@@ -128,9 +135,25 @@ export default async function decorate(block) {
     parent.replaceWith(anchor);
   })
 
-  // Find all li tags and apply appropriate level class
+  menuBlockChildren.forEach(menuItem => {
+    const navItem = document.createElement('li');
+    const topLevelLink = menuItem.firstElementChild.querySelector('a');
 
-  nav.append(menuFragment)
+    navItem.classList = 'nav-item dropdown';
+    menuItem.classList = 'dropdown-menu';
+    menuItem.children[0].classList = 'hidden';
+    menuItem.children[1].classList = 'dropdown-tab-nav';
+    menuItem.children[2].classList = 'dropdown-tab-content';
+    menuItem.children[3].classList = 'dropdown-tab-card';
+
+    navItem.append(topLevelLink);
+    navItem.append(menuItem);
+    navbar.append(navItem);
+  })
+
+  // Find all li tags and apply appropriate level class
+  // navbar.append(menuFragment);
+  nav.append(navbar);
 
   block.append(nav);
 }
