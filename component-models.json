@@ -324,5 +324,24 @@
         "description": "Buttons are represented as paragraph separated links"
       }
     ]
+  },
+  {
+    "id": "menu-item-level-1",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Top level URL",
+        "value": "https://google.com/"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Top level Text",
+        "value": "What we offer"
+      }
+    ]
   }
 ]
