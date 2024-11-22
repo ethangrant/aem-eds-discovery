@@ -120,6 +120,7 @@
         "name": "classes",
         "label": "Card variation",
         "description": "Select card variation",
+        "value": "",
         "options": [
           {"name": "Default", "value": ""},
           {"name": "Hub", "value": "hub-cards"}
