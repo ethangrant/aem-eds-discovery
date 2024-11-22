@@ -23,14 +23,24 @@
     background: blue;
     top: 100%;
     left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 1;
     visibility: hidden;
     width: 100%;
+    max-width: 1440px;
+
+    a:any-link {
+        color: white;
+    }
 }
 
 .dropdown-tab-nav {
     max-width: 20rem;
     background-color: #009cde;
+    color: white;
+    padding: 2rem 0;
 }
 
 .dropdown-tab-content {
@@ -39,11 +49,17 @@
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    padding: 2rem 0;
+
+    ul {
+        padding: 0;
+    }
 }
 
 .dropdown-tab-card {
     max-width: 20rem;
     background-color: white;
+
     img {
         width: 100%;
         height: auto;
@@ -52,4 +68,12 @@
 
 .dropdown-tab-card p {
     margin: 0;
+}
+
+.dropdown-tab-card p:not(:first-child) {
+    padding: 0 1.5rem;
+}
+
+#nav > ul > li:nth-child(1) > div {
+    /*visibility: visible !important;*/
 }
