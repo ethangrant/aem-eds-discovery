@@ -192,16 +192,13 @@
         "component": "select",
         "name": "classes",
         "value": "",
-        "label": "Colour and Pixel Progression",
-        "description": "Set title background colour and pixel progression",
+        "label": "Colour scheme",
+        "description": "Set banner colour scheme",
         "valueType": "string",
         "options": [
-          {"name": "Green with Pixels", "value": "green-txt-pixels"},
-          {"name": "Blue with Pixels", "value": "blue-txt-pixels"},
-          {"name": "Midnight Blue with Pixels", "value": "midnight-blue-txt-pixels"},
-          {"name": "Green Pixels", "value": "green-pixels"},
-          {"name": "Blue Pixels", "value": "blue-pixels"},
-          {"name": "Midnight Blue Pixels", "value": "midnight-blue-pixels"},
+          {"name": "Green", "value": "green-txt-pixels"},
+          {"name": "Blue", "value": "blue-txt-pixels"},
+          {"name": "Midnight Blue", "value": "midnight-blue-txt-pixels"},
           {"name": "none", "value": ""}
         ]
       },
@@ -241,7 +238,7 @@
       {
         "component": "select",
         "name": "text_titleType",
-        "value": "h2",
+        "value": "h1",
         "label": "Title Type",
         "valueType": "string",
         "options": [
@@ -259,25 +256,12 @@
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "text_button",
-        "label": "Button URL",
-        "value": "https://www.adobe.com",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "text_buttonText",
-        "label": "Button text",
-        "value": "Make an enquiry",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "text_buttonType",
-        "label": "Button Type",
-        "value": "primary",
-        "valueType": "string"
+        "component": "richtext",
+        "name": "text_buttons",
+        "value": "<a href=\"https://www.rsmuk.com/\">Example button</a>",
+        "label": "Buttons",
+        "valueType": "string",
+        "description": "Buttons are represented as paragraph separated links"
       }
     ]
   },
@@ -368,6 +352,25 @@
         "name": "card_content",
         "label": "Card Content",
         "value": "Card content goes here!"
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabName",
+        "value": "",
+        "label": "Tab Name"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
       }
     ]
   }
