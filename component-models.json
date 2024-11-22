@@ -116,11 +116,11 @@
     "fields": [
       {
         "component": "select",
-        "valueType": "string",
         "name": "classes",
-        "label": "Card variation",
-        "description": "Select card variation",
         "value": "",
+        "label": "Card Variations",
+        "description": "Select card variation",
+        "valueType": "string",
         "options": [
           {"name": "Default", "value": ""},
           {"name": "Hub", "value": "hub-cards"}
