@@ -11,12 +11,6 @@
     gap: 1rem;
 }
 
-.nav-item:hover {
-    .dropdown-menu {
-        visibility: visible;
-    }
-}
-
 .dropdown-menu {
     display: flex;
     position: absolute;
@@ -33,6 +27,12 @@
 
     a:any-link {
         color: white;
+    }
+}
+
+.nav-item:hover {
+    .dropdown-menu {
+        visibility: visible;
     }
 }
 
@@ -75,5 +75,5 @@
 }
 
 #nav > ul > li:nth-child(1) > div {
-    /*visibility: visible !important;*/
+    /* visibility: visible !important; */
 }
