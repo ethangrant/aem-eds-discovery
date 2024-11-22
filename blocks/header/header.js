@@ -161,6 +161,7 @@ export default async function decorate(block) {
 
   // Find all li tags and apply appropriate level class
   // navbar.append(menuFragment);
+  // test comment
   nav.append(navbar);
 
   block.append(nav);
