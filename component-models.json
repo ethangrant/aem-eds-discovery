@@ -326,6 +326,22 @@
     ]
   },
   {
+    "id": "menu",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {"name": "Default", "value": ""},
+          {"name": "Test", "value": "test-option"}
+        ]
+      }
+    ]
+  },
+  {
     "id": "menu-item",
     "fields": [
       {
