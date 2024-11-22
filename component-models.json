@@ -112,6 +112,22 @@
     ]
   },
   {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Card variation",
+        "description": "Select card variation",
+        "options": [
+          {"name": "Default", "value": ""},
+          {"name": "Hub", "value": "hub-cards"}
+        ]
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
