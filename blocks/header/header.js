@@ -110,9 +110,9 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  //const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  // const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
   const menuPath = navMeta ? new URL(navMeta, window.location).pathname : '/menu-block-test';
-  //const fragment = await loadFragment(navPath);
+  // const fragment = await loadFragment(navPath);
   const menuFragment = await loadFragment(menuPath);
   const nav = document.createElement('nav');
   const navbar = document.createElement('ul');
@@ -123,13 +123,13 @@ export default async function decorate(block) {
 
   // Remove default EDS button markup.
   const menuButtons = menuFragment.querySelectorAll('p > a, strong > a');
-  menuButtons.forEach((anchor => {
-    anchor.classList = "";
+  menuButtons.forEach((anchor) => {
+    anchor.classList = '';
     const parent = anchor.parentElement;
     parent.replaceWith(anchor);
-  }))
+  });
 
-  menuBlockChildren.forEach((menuItem => {
+  menuBlockChildren.forEach((menuItem) => {
     const navItem = document.createElement('li');
     const topLevelLink = menuItem.firstElementChild.querySelector('a');
 
@@ -142,7 +142,7 @@ export default async function decorate(block) {
 
     const subCategories = menuItem.querySelectorAll('.dropdown-tab-nav > ul > li');
 
-    subCategories.forEach(categories => {
+    subCategories.forEach((categories) => {
       const levelTwoLink = categories.firstElementChild;
 
       // used to map which third level categories should be visible
@@ -150,14 +150,14 @@ export default async function decorate(block) {
 
       // move third level cats into content section
       const thirdLevelCats = categories.querySelector('ul');
-      thirdLevelCats.id = 'dropdown-tab-' + mapId;
+      thirdLevelCats.id = `dropdown-tab-${mapId}`;
       menuItem.querySelector('.dropdown-tab-content').append(thirdLevelCats);
     });
 
     navItem.append(topLevelLink);
     navItem.append(menuItem);
     navbar.append(navItem);
-  }))
+  });
 
   // Find all li tags and apply appropriate level class
   // navbar.append(menuFragment);
