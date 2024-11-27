@@ -161,7 +161,7 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "link",
+        "name": "card-link",
         "label": "Card Link"
       }
     ]

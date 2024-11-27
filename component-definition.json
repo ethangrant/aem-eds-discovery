@@ -107,7 +107,10 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Card",
-                  "model": "card"
+                  "model": "card",
+                  "card-title": "Sample card title",
+                  "card-body": "Sample card body text",
+                  "card-link": "https://www.rsmuk.com/"
                 }
               }
             }
