@@ -146,9 +146,16 @@
       },
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
+        "name": "card-title",
+        "value": "Sample card title.",
+        "label": "Card Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "card-body",
+        "value": "Sample card body text.",
+        "label": "Card Body",
         "valueType": "string"
       },
       {
