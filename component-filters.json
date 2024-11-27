@@ -14,7 +14,7 @@
       "title",
       "hero",
       "cards",
-      "test-cards",
+      "panels",
       "columns",
       "fragment",
       "banner",
@@ -57,9 +57,9 @@
     ]
   },
   {
-    "id": "test-cards",
+    "id": "panels",
     "components": [
-      "test-card"
+      "panel-item"
     ]
   }
 ]

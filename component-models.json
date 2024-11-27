@@ -391,7 +391,7 @@
     ]
   },
   {
-    "id": "test-cards",
+    "id": "panels",
     "fields": [
       {
         "component": "select",
@@ -408,7 +408,7 @@
     ]
   },
   {
-    "id": "test-card",
+    "id": "panel-item",
     "fields": [
       {
         "component": "reference",
