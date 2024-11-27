@@ -55,5 +55,11 @@
     "components": [
       "tabs-item"
     ]
+  },
+  {
+    "id": "test-cards",
+    "components": [
+      "test-card"
+    ]
   }
 ]
