@@ -33,6 +33,23 @@
   ],
   "models": [
     {
+      "id": "cards",
+      "fields": [
+        {
+          "component": "select",
+          "name": "classes",
+          "value": "",
+          "label": "Options",
+          "valueType": "string",
+          "options": [
+            {"name": "Default", "value": ""},
+            {"name": "Hub", "value": "hub-cards"},
+            {"name": "Article", "value": "article-cards"}
+          ]
+        }
+      ]
+    },
+    {
       "id": "card",
       "fields": [
         {
