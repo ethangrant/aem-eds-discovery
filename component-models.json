@@ -19,18 +19,6 @@
     "id": "title",
     "fields": [
       {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "Options",
-        "valueType": "string",
-        "options": [
-          {"name": "Default", "value": ""},
-          {"name": "Hub", "value": "hub-cards"},
-          {"name": "Article", "value": "article-cards"}
-        ]
-      },
-      {
         "component": "text",
         "name": "title",
         "label": "Title"
@@ -475,7 +463,7 @@
     ]
   },
   {
-    "id": "hero-title",
+    "id": "hero-heading",
     "fields": [
       {
         "component": "select",

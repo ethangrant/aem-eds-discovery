@@ -21,7 +21,7 @@
       "profile",
       "menu",
       "tabs",
-      "hero-title"
+      "hero-heading"
     ]
   },
   {
@@ -42,8 +42,7 @@
       "text",
       "image",
       "button",
-      "title",
-      "hero-title"
+      "title"
     ]
   },
   {
