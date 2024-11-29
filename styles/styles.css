@@ -242,7 +242,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
@@ -308,4 +308,20 @@ main .section.highlight {
 
 .text-grey-bg {
   background-color: var(--text-grey);
+}
+
+.op-80 {
+  opacity: 80%;
+}
+
+.op-60 {
+  opacity: 60%;
+}
+
+.op-40 {
+  opacity: 40%;
+}
+
+.op-20 {
+  opacity: 20%;
 }

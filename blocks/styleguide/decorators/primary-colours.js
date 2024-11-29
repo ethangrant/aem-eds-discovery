@@ -24,7 +24,6 @@ export default function decoratePrimaryColours(fragment) {
 function getColourObject(listItem) {
   const value = listItem.innerText;
   let colour = value.split('-');
-  const className = colour[0].toLowerCase().replaceAll(' ', '-') + 'bg';
   colour = colour.map(part => part.trim());
 
   return {
@@ -51,6 +50,7 @@ function generateDom(columns) {
       const colourLabel = document.createElement('p');
       const colourBox = document.createElement('div');
       const hexLabel = document.createElement('p');
+      const opacities = [80, 60, 40, 20];
 
       colourLabel.innerText = colour.colourLabel;
       hexLabel.innerText = colour.hexCode;
@@ -58,6 +58,20 @@ function generateDom(columns) {
 
       const elements = [colourLabel, colourBox, hexLabel];
       elements.forEach(element => liElement.append(element))
+
+      // only show opacities for the first column.
+      if (index === 0) {
+        const opacityContainer = document.createElement('div');
+        opacityContainer.classList = 'opacity-container';
+        opacities.forEach((opacity) => {
+          const colourBoxSmall = document.createElement('div');
+          colourBoxSmall.className = colour.class + " colour-box-small op-" + opacity;
+
+          opacityContainer.append(colourBoxSmall);
+        });
+
+        liElement.append(opacityContainer);
+      }
 
       ulElement.append(liElement);
     })

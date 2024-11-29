@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
 
+  p {
+    margin: 0 0 5px 0;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -14,10 +18,20 @@
   min-height: 104px;
 }
 
+.colour-box-small {
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+
+.opacity-container {
+  margin-top: 30px;
+}
+
 @media (width >= 900px) {
   .primary-colours {
     flex-direction: row;
     justify-content: space-between;
+    gap: 5%;
 
     ul {
       flex-direction: row;
