@@ -13,6 +13,8 @@ import {
   loadCSS,
 } from './aem.js';
 
+import { loadStyleGuide } from './styleguide.js';
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -126,6 +128,9 @@ async function loadLazy(doc) {
 
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
+  if (window.location.pathname === '/style-guide') {
+    loadStyleGuide(doc)
+  }
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
