@@ -20,7 +20,14 @@
       "banner",
       "profile",
       "menu",
-      "tabs"
+      "tabs",
+      "hero-title"
+    ]
+  },
+  {
+    "id": "banner",
+    "components": [
+      "hero-title"
     ]
   },
   {

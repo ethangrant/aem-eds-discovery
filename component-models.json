@@ -19,6 +19,18 @@
     "id": "title",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {"name": "Default", "value": ""},
+          {"name": "Hub", "value": "hub-cards"},
+          {"name": "Article", "value": "article-cards"}
+        ]
+      },
+      {
         "component": "text",
         "name": "title",
         "label": "Title"
@@ -459,6 +471,61 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero-title",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "Blue",
+        "label": "Background Colour",
+        "description": "Set background colour of hero title",
+        "valueType": "string",
+        "options": [
+          {"name": "Green", "value": "green-bg"},
+          {"name": "Blue", "value": "blue-bg"},
+          {"name": "Midnight Blue", "value": "midnight-blue-bg"}
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "value": "RSM:Audit, tax and consulting services"
+      },
+      {
+        "component": "select",
+        "name": "textType",
+        "label": "Text Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
       }
     ]
   }
