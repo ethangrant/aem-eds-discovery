@@ -480,14 +480,13 @@
       {
         "component": "select",
         "name": "classes",
-        "value": "blue-bg",
+        "value": "rsm-blue-bg",
         "label": "Background Colour",
         "description": "Set background colour of hero title",
         "valueType": "string",
         "options": [
-          {"name": "Green", "value": "green-bg"},
-          {"name": "Blue", "value": "blue-bg"},
-          {"name": "Midnight Blue", "value": "midnight-blue-bg"}
+          {"name": "Green", "value": "rsm-green-bg"},
+          {"name": "Blue", "value": "rsm-blue-bg"}
         ]
       },
       {

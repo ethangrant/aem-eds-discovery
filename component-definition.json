@@ -275,7 +275,7 @@
                   "filter": "hero-title",
                   "model": "hero-title",
                   "text": "RSM:Audit, tax and consulting services",
-                  "classes": "blue-bg",
+                  "classes": "rsm-blue-bg",
                   "textType": "h1"
                 }
               }
