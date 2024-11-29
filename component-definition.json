@@ -274,7 +274,7 @@
                   "name": "Hero Heading",
                   "filter": "hero-heading",
                   "model": "hero-heading",
-                  "text": "RSM:Audit, tax and consulting services",
+                  "text": "<h1>RSM:Audit, tax and consulting services</h1>",
                   "classes": "rsm-blue-bg",
                   "textType": "h1"
                 }

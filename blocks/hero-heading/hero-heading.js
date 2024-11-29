@@ -1,4 +1,2 @@
-// export default async function decorate(block) {
-//   console.log(block);
-//   debugger;
-// }
+export default async function decorate(block) {
+}
