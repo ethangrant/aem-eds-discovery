@@ -25,12 +25,6 @@
     ]
   },
   {
-    "id": "banner",
-    "components": [
-      "hero-title"
-    ]
-  },
-  {
     "id": "cards",
     "components": [
       "card"
@@ -39,8 +33,7 @@
   {
     "id": "columns",
     "components": [
-      "column",
-      "hero-title"
+      "column"
     ]
   },
   {
@@ -49,7 +42,8 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "hero-title"
     ]
   },
   {
