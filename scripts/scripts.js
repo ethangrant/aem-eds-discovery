@@ -13,7 +13,7 @@ import {
   loadCSS,
 } from './aem.js';
 
-import { loadStyleGuide } from './styleguide.js';
+import loadStyleGuide from './styleguide.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -129,7 +129,7 @@ async function loadLazy(doc) {
   loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
   if (window.location.pathname === '/style-guide') {
-    loadStyleGuide(doc)
+    loadStyleGuide();
   }
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);

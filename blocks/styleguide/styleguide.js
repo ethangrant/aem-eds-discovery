@@ -1,5 +1,5 @@
-import { loadFragment } from "../fragment/fragment.js";
-import decoratePrimaryColours from "./decorators/primary-colours.js"
+import { loadFragment } from '../fragment/fragment.js';
+import decoratePrimaryColours from './decorators/primary-colours.js';
 
 export default async function decorate(block) {
   const primaryColours = await loadFragment('/style-guide/primary-colours');
