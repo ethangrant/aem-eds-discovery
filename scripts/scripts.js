@@ -16,6 +16,14 @@ import {
 import loadStyleGuide from './styleguide.js';
 
 /**
+ * @param {string} innerHtml
+ * @returns {string}
+ */
+export function decodeBrElement(innerHtml) {
+  return innerHtml.replaceAll('&lt;br&gt;', '<br>');
+}
+
+/**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
