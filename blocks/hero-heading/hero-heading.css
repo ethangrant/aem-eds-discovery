@@ -6,7 +6,7 @@
   position: relative;
   display: inline-block;
 
-  &:before {
+  &::before {
     width: 16px;
     height: 32px;
     left: 100%;
@@ -17,7 +17,7 @@
     display: block;
   }
 
-  &:after {
+  &::after {
     width: 25px;
     height: 36px;
     left: -25px;
