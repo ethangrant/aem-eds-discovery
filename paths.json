@@ -3,7 +3,7 @@
     "/content/aem-eds-discovery/:/",
     "/content/aem-eds-discovery/configuration:/.helix/config.json",
     "/content/aem-eds-discovery/metadata:/metadata.json",
-    "/content/aem-eds-discovery/query-index.json"
+    "/content/mysite.resource/query-index.json:/query-index.json"
   ],
   "includes": [
     "/content/aem-eds-discovery/"
