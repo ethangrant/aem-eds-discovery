@@ -1,15 +1,25 @@
 import { loadFragment } from '../fragment/fragment.js';
 import decoratePrimaryColours from './decorators/primary-colours.js';
 
+const fragmentConfig = {
+  '/style-guide/primary-colours': decoratePrimaryColours,
+  '/style-guide/titles': null,
+};
+
+async function loadAndDecorateFragment(path, decorator) {
+  const fragment = await loadFragment(path);
+  if (decorator) decorator(fragment);
+  return fragment;
+}
+
 export default async function decorate(block) {
-  const primaryColours = await loadFragment('/style-guide/primary-colours');
-  const titles = await loadFragment('/style-guide/titles');
+  const fragmentPromises = Object.entries(fragmentConfig).map(
+    async ([path, decorator]) => loadAndDecorateFragment(path, decorator),
+  );
 
-  decoratePrimaryColours(primaryColours);
+  const fragments = await Promise.all(fragmentPromises);
 
-  block.append(primaryColours);
-  block.append(titles);
-
-  // each section of the style guide would be its own fragement.
-  // in this file we load each fragment then pass it through its own decorate method for styling
+  fragments.forEach((fragment) => {
+    block.append(fragment);
+  });
 }
