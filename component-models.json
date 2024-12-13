@@ -515,5 +515,22 @@
         ]
       }
     ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "description": "'Default' renders just the suggestions. 'Search Page' populates dedicated search results page.",
+        "options": [
+          {"name": "Default", "value": ""},
+          {"name": "Search Page", "value": "search-page"}
+        ]
+      }
+    ]
   }
 ]
