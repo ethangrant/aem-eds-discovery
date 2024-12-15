@@ -4,6 +4,13 @@ import {
   fetchPlaceholders,
 } from '../../scripts/aem.js';
 
+import {
+  buildSearchResults,
+} from './view/search-page.js';
+
+import getSearchResult from './model/result.js';
+import sampleData from './sample/data.js';
+
 const searchParams = new URLSearchParams(window.location.search);
 
 function findNextHeading(el) {
@@ -106,6 +113,7 @@ function renderResult(result, searchTerms, titleTag) {
   }
   if (result.description) {
     const description = document.createElement('p');
+    description.classList = 'description';
     description.textContent = result.description;
     highlightTextElements(searchTerms, [description]);
     a.append(description);
@@ -129,10 +137,10 @@ function clearSearch(block) {
   }
 }
 
-async function renderResults(block, config, filteredData, searchTerms) {
+async function renderResults(block, config, filteredData, searchTerms, selector = '.search-results') {
   clearSearchResults(block);
-  const searchResults = block.querySelector('.search-results');
-  const headingTag = searchResults.dataset.h;
+  const searchResults = block.querySelector(selector) ?? document.querySelector(selector);
+  const headingTag = 'div';
 
   if (filteredData.length) {
     searchResults.classList.remove('no-results');
@@ -219,6 +227,7 @@ function searchInput(block, config) {
   const input = document.createElement('input');
   input.setAttribute('type', 'search');
   input.className = 'search-input';
+  input.name = 'q';
 
   const searchPlaceholder = config.placeholders.searchPlaceholder || 'Search...';
   input.placeholder = searchPlaceholder;
@@ -239,6 +248,13 @@ function searchIcon() {
   return icon;
 }
 
+function searchForm() {
+  const formEl = document.createElement('form');
+  formEl.action = '/search';
+
+  return formEl;
+}
+
 function searchBox(block, config) {
   const box = document.createElement('div');
   box.classList.add('search-box');
@@ -250,19 +266,37 @@ function searchBox(block, config) {
   return box;
 }
 
+function isSearchPageBlock(block) {
+  return block.classList.contains('search-page');
+}
+
 export default async function decorate(block) {
   const placeholders = await fetchPlaceholders();
   const source = block.querySelector('a[href]')?.href || `${window.hlx.codeBasePath}/query-index.json`;
+  const config = { source, placeholders };
   block.innerHTML = '';
+
+  const formEl = searchForm();
+  const searchBoxEl = searchBox(block, config);
+
+  formEl.append(searchBoxEl);
   block.append(
-    searchBox(block, { source, placeholders }),
+    formEl,
     searchResultsContainer(block),
   );
 
-  if (searchParams.get('q')) {
+  if (searchParams.get('q') && isSearchPageBlock(block)) {
+    const searchValue = searchParams.get('q');
+    const currentPageValue = searchParams.get('p') ?? 1;
     const input = block.querySelector('input');
-    input.value = searchParams.get('q');
-    input.dispatchEvent(new Event('input'));
+    input.value = searchValue;
+
+    const searchTerms = searchValue.toLowerCase().split(/\s+/).filter((term) => !!term);
+    const data = await fetchData(config.source);
+    const filteredData = filterData(searchTerms, sampleData);
+    const result = getSearchResult(filteredData, parseInt(currentPageValue, 10));
+
+    buildSearchResults(result);
   }
 
   decorateIcons(block);
