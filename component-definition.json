@@ -274,9 +274,9 @@
                   "name": "Hero Heading",
                   "filter": "hero-heading",
                   "model": "hero-heading",
-                  "text": "RSM:Audit, tax and <br> consulting services",
                   "classes": "rsm-blue-bg",
-                  "textType": "h1"
+                  "heading": "RSM:Audit, tax and <br> consulting services",
+                  "headingType": "h1"
                 }
               }
             }

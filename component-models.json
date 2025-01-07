@@ -480,13 +480,15 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "text",
+        "name": "heading",
         "value": "RSM:Audit, tax and <br> consulting services"
       },
       {
         "component": "select",
-        "name": "textType",
+        "name": "headingType",
         "label": "Text Type",
+        "valueType": "string",
+        "value": "h1",
         "options": [
           {
             "name": "h1",
@@ -513,6 +515,12 @@
             "value": "h6"
           }
         ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "value": "RSM:Audit, tax and <br> consulting services"
       }
     ]
   }
