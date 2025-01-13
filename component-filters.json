@@ -14,16 +14,8 @@
       "title",
       "hero",
       "cards",
-      "panels",
       "columns",
-      "fragment",
-      "banner",
-      "profile",
-      "menu",
-      "tabs",
-      "search",
-      "form",
-      "hero-heading"
+      "fragment"
     ]
   },
   {
@@ -48,21 +40,31 @@
     ]
   },
   {
-    "id": "menu",
+    "id": "form",
     "components": [
-      "menu-item"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
-    ]
-  },
-  {
-    "id": "panels",
-    "components": [
-      "panel-item"
+      "captcha",
+      "checkbox",
+      "checkbox-group",
+      "date-input",
+      "drop-down",
+      "email",
+      "file-input",
+      "form-accordion",
+      "form-button",
+      "form-fragment",
+      "form-image",
+      "form-modal",
+      "form-reset-button",
+      "form-submit-button",
+      "number-input",
+      "panel",
+      "plain-text",
+      "radio-group",
+      "rating",
+      "telephone-input",
+      "text-input",
+      "tnc",
+      "wizard"
     ]
   }
 ]
