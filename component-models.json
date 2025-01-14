@@ -121,18 +121,9 @@
         "label": "Options",
         "valueType": "string",
         "options": [
-          {
-            "name": "Default",
-            "value": ""
-          },
-          {
-            "name": "Hub",
-            "value": "hub-cards"
-          },
-          {
-            "name": "Article",
-            "value": "article-cards"
-          }
+          {"name": "Default", "value": ""},
+          {"name": "Hub", "value": "hub-cards"},
+          {"name": "Article", "value": "article-cards"}
         ]
       }
     ]
@@ -148,11 +139,30 @@
         "multi": false
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "imageAlt"
+      },
+      {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
+        "name": "card-title",
+        "value": "Sample card title.",
+        "label": "Card Title",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "card-body",
+        "value": "Sample card body text.",
+        "label": "Card Body",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "card-link",
+        "label": "Card Link"
       }
     ]
   },
@@ -172,184 +182,6 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "form-embed",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formPath",
-        "value": "",
-        "label": "Form Path"
-      }
-    ]
-  },
-  {
-    "id": "form",
-    "fields": [
-      {
-        "component": "select",
-        "name": "thankYouOption",
-        "label": "On Submit",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Show message",
-            "value": "message"
-          }
-        ]
-      },
-      {
-        "component": "richtext",
-        "name": "thankYouMessage",
-        "label": "Message Content",
-        "valueType": "string",
-        "condition": {
-          "==": [
-            {
-              "var": "thankYouOption"
-            },
-            "message"
-          ]
-        }
-      },
-      {
-        "component": "select",
-        "valueType": "string",
-        "name": "actionType",
-        "label": "Submit Action",
-        "options": [
-          {
-            "name": "Submit to REST endpoint",
-            "value": "fd/af/components/guidesubmittype/restendpoint"
-          },
-          {
-            "name": "Send email",
-            "value": "fd/af/components/guidesubmittype/email"
-          }
-        ],
-        "value": ""
-      },
-      {
-        "component": "boolean",
-        "name": "enableRestEndpointPost",
-        "label": "Enable POST request",
-        "valueType": "string",
-        "condition": {
-          "==": [
-            {
-              "var": "actionType"
-            },
-            "fd/af/components/guidesubmittype/restendpoint"
-          ]
-        }
-      },
-      {
-        "component": "text",
-        "name": "restEndpointPostUrl",
-        "label": "URL For POST request",
-        "valueType": "string",
-        "condition": {
-          "==": [
-            {
-              "var": "actionType"
-            },
-            "fd/af/components/guidesubmittype/restendpoint"
-          ]
-        }
-      },
-      {
-        "component": "container",
-        "name": "email",
-        "label": "Email Configuration",
-        "collapsible": false,
-        "condition": {
-          "==": [
-            {
-              "var": "actionType"
-            },
-            "fd/af/components/guidesubmittype/email"
-          ]
-        },
-        "fields": [
-          {
-            "component": "text",
-            "name": "from",
-            "label": "From",
-            "valueType": "string"
-          },
-          {
-            "component": "text",
-            "name": "mailto",
-            "label": "To",
-            "valueType": "string",
-            "multi": true,
-            "required": true
-          },
-          {
-            "component": "text",
-            "name": "cc",
-            "label": "CC",
-            "valueType": "string",
-            "multi": true
-          },
-          {
-            "component": "text",
-            "name": "bcc",
-            "label": "BCC",
-            "valueType": "string",
-            "multi": true
-          },
-          {
-            "component": "text",
-            "name": "subject",
-            "label": "Subject",
-            "valueType": "string"
-          },
-          {
-            "component": "boolean",
-            "name": "useExternalEmailTemplate",
-            "label": "Use external template",
-            "valueType": "boolean"
-          },
-          {
-            "component": "aem-content",
-            "name": "templatePath",
-            "label": "External template path",
-            "valueType": "string",
-            "condition": {
-              "==": [
-                {
-                  "var": "useExternalEmailTemplate"
-                },
-                true
-              ]
-            }
-          },
-          {
-            "component": "richtext",
-            "name": "template",
-            "label": "Email template",
-            "valueType": "string",
-            "condition": {
-              "!=": [
-                {
-                  "var": "useExternalEmailTemplate"
-                },
-                true
-              ]
-            }
-          },
-          {
-            "component": "boolean",
-            "name": "includeAttachments",
-            "label": "Include attachments",
-            "valueType": "boolean"
-          }
-        ]
       }
     ]
   },
@@ -386,6 +218,309 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "banner",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Colour scheme",
+        "description": "Set banner colour scheme",
+        "valueType": "string",
+        "options": [
+          {"name": "Green", "value": "green-txt-pixels"},
+          {"name": "Blue", "value": "blue-txt-pixels"},
+          {"name": "Midnight Blue", "value": "midnight-blue-txt-pixels"},
+          {"name": "none", "value": ""}
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "background_desktopBackgroundImage",
+        "label": "Desktop Background Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "background_mobileBackgroundImage",
+        "label": "Mobile Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "background_desktopBackgroundImageAlt",
+        "label": "Desktop Background Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "background_mobileBackgroundImageAlt",
+        "label": "Mobile Background Image Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "title",
+        "valueType": "string",
+        "name": "text_title",
+        "label": "Title",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "name": "text_titleType",
+        "value": "h1",
+        "label": "Title Type",
+        "valueType": "string",
+        "options": [
+          {"name": "h1", "value":"h1"},
+          {"name": "h2", "value":"h2"},
+          {"name": "h3", "value":"h3"},
+          {"name": "h4", "value":"h4"}
+        ]
+      },
+      {
+        "component": "richtext",
+        "name": "text_description",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text_buttons",
+        "value": "<a href=\"https://www.rsmuk.com/\">Example button</a>",
+        "label": "Buttons",
+        "valueType": "string",
+        "description": "Buttons are represented as paragraph separated links"
+      }
+    ]
+  },
+  {
+    "id": "profile",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "midnight-blue-bg",
+        "label": "Background Colour",
+        "description": "Set background colour of profile card",
+        "valueType": "string",
+        "options": [
+          {"name": "Green", "value": "green-bg"},
+          {"name": "Blue", "value": "blue-bg"},
+          {"name": "Midnight Blue", "value": "midnight-blue-bg"}
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "avatar",
+        "label": "Profile picture",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "avatarAlt",
+        "label": "Profile picture Alt",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Profile Description"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "buttons",
+        "label": "Profile Buttons",
+        "description": "Buttons are represented as paragraph separated links"
+      }
+    ]
+  },
+  {
+    "id": "menu",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {"name": "Default", "value": ""},
+          {"name": "Test", "value": "test-option"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "menu-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Top level URL",
+        "value": "https://google.com/"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Top level Text",
+        "value": "What we offer"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "dropdown-nav",
+        "label": "Dropdown Navigation"
+      },
+
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "dropdown-content",
+        "label": "Dropdown Content"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "card_image",
+        "label": "Card Image",
+        "multi": "false"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "card_content",
+        "label": "Card Content",
+        "value": "Card content goes here!"
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabName",
+        "value": "",
+        "label": "Tab Name"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "panels",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {"name": "Default", "value": ""},
+          {"name": "Hub", "value": "hub-cards"},
+          {"name": "Article", "value": "article-cards"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "panel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero-heading",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "rsm-blue-bg",
+        "label": "Background Colour",
+        "description": "Set background colour of hero title",
+        "valueType": "string",
+        "options": [
+          {"name": "Green", "value": "rsm-green-bg"},
+          {"name": "Blue", "value": "rsm-blue-bg"}
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "value": "RSM:Audit, tax and <br> consulting services"
+      },
+      {
+        "component": "select",
+        "name": "headingType",
+        "label": "Text Type",
+        "valueType": "string",
+        "value": "h1",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "value": "RSM:Audit, tax and <br> consulting services"
       }
     ]
   }
