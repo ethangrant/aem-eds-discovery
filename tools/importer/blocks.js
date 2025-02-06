@@ -1,5 +1,19 @@
+function getBlockNameWithVariant(blockName = '', variant = '') {
+  if (variant) {
+    return `${blockName} (${variant})`;
+  }
 
-export function createBannerBlock(variant, desktopImage, mobileImage, desktopImageAlt, mobileImageAlt, title, description, buttons) {
+  return blockName;
+}
+
+export function createBannerBlock(
+  variant,
+  desktopImage,
+  mobileImage,
+  title,
+  description,
+  buttons,
+) {
   const cells = [
     [getBlockNameWithVariant('banner', variant)],
     [[desktopImage, mobileImage]],
@@ -19,10 +33,45 @@ export function createHeroTitleBlock(variant = 'rsm-green-bg', title = '', secon
   return WebImporter.DOMUtils.createTable(cells, document);
 }
 
-function getBlockNameWithVariant(blockName = '', variant = '') {
-  if (variant) {
-    return `${blockName} (${variant})`;
-  }
+const transformer = {
+  transform: (element) => {
 
-  return blockName;
+  },
+
+  parse: (element) => {
+    let bannerTitle = '';
+    let bannerImage = '';
+    let mobileBannerImage = '';
+
+    bannerImage = element.querySelector('picture img');
+    bannerImage.alt = 'test';
+
+    bannerTitle = element.querySelector('.hero-title h1');
+
+    mobileBannerImage = bannerImage.cloneNode(true);
+    mobileBannerImage.alt = 'mobile image';
+
+    return {
+      desktopImage: bannerImage,
+      mobileImage: mobileBannerImage,
+      title: bannerTitle,
+    };
+  },
+
+  createBannerBlock: (
+    variant,
+    desktopImage,
+    mobileImage,
+    title,
+    description,
+    buttons,
+  ) => {
+    const cells = [
+      [getBlockNameWithVariant('banner', variant)],
+      [[desktopImage, mobileImage]],
+      [[title, description, buttons]],
+    ];
+
+    return WebImporter.DOMUtils.createTable(cells, document);
+  }
 }

@@ -19,6 +19,16 @@ export default {
     if (!WebImporter.BlockUtils) {
       WebImporter.BlockUtils = await import('./blocks.js');
     }
+
+    if (!WebImporter.Transformers) {
+      const { default: ComponentTransformer } = await import('./component-transformer.js');
+      const { default: BannerTransformer } = await import('./transformers/banner.js');
+
+      WebImporter.Transformers = {
+        ComponentTransformer,
+        BannerTransformer,
+      };
+    }
   },
 
   /**
@@ -54,49 +64,63 @@ export default {
     WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
     WebImporter.rules.convertIcons(main, document);
 
-    // function getBlockNameWithVariant(blockName = '', variant = '') {
-    //   if (variant) {
-    //     return `${blockName} (${variant})`;
-    //   }
-    //
-    //   return blockName;
-    // }
-    //
-    // function createBannerBlock(variant, desktopImage, mobileImage, desktopImageAlt, mobileImageAlt, title, description, buttons) {
-    //   const cells = [
-    //     [getBlockNameWithVariant('banner', variant)],
-    //     [[desktopImage, mobileImage]],
-    //     [[title, description, buttons]],
-    //   ];
-    //
-    //   return WebImporter.DOMUtils.createTable(cells, document);
-    // }
+    const map = {
+      'hero-banner-big-component': WebImporter.Transformers.BannerTransformer,
+    };
 
-    let bannerEl = main.querySelector('.hero-landing');
-    let bannerTitle = '';
-    let bannerImage = '';
-    let mobileImage = '';
+    const componentTransformer = new WebImporter.Transformers.ComponentTransformer();
 
-    bannerImage = bannerEl.querySelector('picture img');
-    bannerImage.alt = 'test';
+    const components = document.querySelectorAll('#content .component');
+    components.forEach((element) => {
+      const elementClassList = element.classList;
+      // site core element structure always has 'component componentname col'
+      const componentName = elementClassList[1];
 
-    bannerTitle = bannerEl.querySelector('.hero-title h1');
+      if (!componentName) {
+        return;
+      }
 
-    mobileImage = bannerImage.cloneNode(true);
-    mobileImage.alt = 'mobile image';
+      const Transformer = map[componentName] ?? null;
+      if (!Transformer) {
+        return;
+      }
 
-    let block = WebImporter.BlockUtils.createBannerBlock(
-      '',
-      bannerImage,
-      '',
-      'test alt',
-      'test alt',
-      bannerTitle,
-      '',
-      ''
-    );
+      componentTransformer
+        .setTransformer(new Transformer(WebImporter.DOMUtils));
 
-    main.prepend(block);
+      const block = componentTransformer.transform(element);
+
+      // @TODO block should replace the original component in main.
+      element.replaceWith(block);
+    });
+
+    // let bannerEl = main.querySelector('.hero-landing');
+    // let bannerTitle = '';
+    // let bannerImage = '';
+    // let mobileImage = '';
+
+    // bannerImage = bannerEl.querySelector('picture img');
+    // bannerImage.alt = 'test';
+
+    // bannerTitle = bannerEl.querySelector('.hero-title h1');
+
+    // mobileImage = bannerImage.cloneNode(true);
+    // mobileImage.alt = 'mobile image';
+
+    // let block = WebImporter.BlockUtils.createBannerBlock(
+    //   '',
+    //   bannerImage,
+    //   '',
+    //   'test alt',
+    //   'test alt',
+    //   bannerTitle,
+    //   '',
+    //   ''
+    // );
+
+    // let block = WebImporter.Transformers.BannerTransformer
+
+    // main.prepend(block);
     //
     // const cells = [
     //   ['hero-heading (rsm-green-bg)'],
