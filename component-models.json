@@ -112,6 +112,25 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "source",
+        "value": "",
+        "label": "Form Source",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "submit",
+        "value": "",
+        "label": "Form Action",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "cards",
     "fields": [
       {
