@@ -9,76 +9,196 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+    /* Colors Primary - OK - 1 query */
+    --color-primary-light-purple: rgba(167, 93, 214, 1);
+    --color-primary-light-purple-two: rgba(154, 83, 198, 1);
+    --color-primary-light-purple-10: rgba(244, 237, 249, 1);
+    --color-primary-dark-purple: rgba(43, 28, 69, 1);
+    --color-primary-cream: rgba(255, 236, 212, 1);
 
-  /* rsm colours */
-  --rsm-white: #FFF;
-  --rsm-blue: #009CDE;
-  --rsm-green: #3f9C35;
-  --rsm-mid-grey: #888B8D;
-  --rsm-dark-grey: #63666A;
-  --rsm-midnight-blue: #00153D;
-  --rsm-light-grey: #CCCFCF;
-  --text-grey: #515356;
+    /* !!not in style guide */
+    --color-purple: rgba(139, 50, 194, 1);
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+    /* Secondary - OK */
+    --color-secondary-light-red: rgba(255, 70, 21, 1);
+    --color-secondary-light-red-10: rgba(229, 4, 8, 1);
+    --color-secondary-light-red-20: rgba(251, 97, 97, 1);
+    --color-secondary-dark-red: rgba(224, 49, 0, 1);
+    --color-secondary-light-green: rgba(63, 182, 92, 1);
+    --color-secondary-dark-green: rgba(43, 125, 63, 1);
+    --color-secondary-yellow: rgba(255, 217, 0, 1);
+    --color-secondary-orange: rgba(253, 153, 65, 1);
+    --color-secondary-blue: rgba(63, 63, 235, 1);
+    --color-secondary-blue-10: rgba(57, 57, 211, 1);
+    --color-secondary-blue-20: rgba(50, 50, 188, 1);
+    --color-secondary-dark-blue: rgba(0, 73, 110, 1);
+    --color-secondary-dark-red-10: rgba(182, 40, 0, 1);
+    --color-secondary-dark-red-20: rgba(143, 31, 0, 1);
 
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+    /* Neutrals - OK - 1 query */
+    --color-neutral-black: rgba(0, 0, 0, 1);
+    --color-neutral-tundora: rgba(77, 77, 77, 1);
+    --color-neutral-gray: rgba(115, 115, 115, 1);
+    --color-neutral-gray-two: rgba(153, 153, 153, 1);
+    --color-neutral-silver: rgba(186, 186, 186, 1);
+    --color-neutral-silver-two: rgba(207, 208, 211, 1);
+    --color-neutral-alto: rgba(224, 224, 224, 1);
+    --color-neutral-light-gray: rgba(249, 249, 249, 1);
+    --color-neutral-mid-gray: rgba(234, 229, 232, 1);
+    --color-neutral-mid-gray-two: rgba(187, 187, 187, 1);
+    --color-neutral-white: rgba(255, 255, 255, 1);
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+    /* !!not in style guide */
+    --color-neutral-gray-light: rgba(255, 255, 255, 0.30);
 
-  /* nav height */
-  --nav-height: auto;
+    /* Typography */
+    --body-font-family: "Inner Tight", sans-serif;
+    --heading-font-primary-family: "Rebond Grotesque", sans-serif;
+
+    --font-size-base: 1rem;
+    --font-size-small: 0.875rem;
+    --font-size-x-small: 0.75rem;
+
+    --line-height-default: 150%;
+    --line-height-s: 120%;
+    --line-height-xs: 100%;
+
+    /* Titles - same as headings? */
+    --font-size-title-display-primary-xl: 4.5rem;
+    --font-size-title-display-primary-l: 3.75rem;
+    --font-size-title-display-primary-m: 3rem;
+    --font-size-title-display-primary-s: 2.5rem;
+    --font-size-title-display-secondary-xl: 4.5rem;
+    --font-size-title-display-secondary-l: 3.75rem;
+    --font-size-title-display-secondary-m: 3rem;
+    --font-size-title-display-secondary-s: 2.5rem;
+    --font-size-title-display-tertiary-xl: 5.125rem;
+    --font-size-title-display-tertiary-l: 4.5rem;
+    --font-size-title-display-tertiary-m: 3.75rem;
+    --font-size-title-display-tertiary-s: 3rem;
+
+    --font-size-title-semantic-primary-xxl: 2rem;
+    --font-size-title-semantic-primary-xl: 1.75rem;
+    --font-size-title-semantic-primary-l: 1.5rem;
+    --font-size-title-semantic-primary-m: 1.25rem;
+    --font-size-title-semantic-primary-s: 1.125rem;
+    --font-size-title-semantic-primary-xs: 1rem;
+
+    --font-size-title-semantic-secondary-xxl: 2rem;
+    --font-size-title-semantic-secondary-xl: 1.75rem;
+    --font-size-title-semantic-secondary-l: 1.5rem;
+    --font-size-title-semantic-secondary-m: 1.25rem;
+    --font-size-title-semantic-secondary-s: 1.125rem;
+    --font-size-title-semantic-secondary-xs: 1rem;
+
+    --font-size-title-semantic-tertiary-xl: 2.75rem;
+    --font-size-title-semantic-tertiary-l: 2rem;
+    --font-size-title-semantic-tertiary-m: 1.75rem;
+    --font-size-title-semantic-tertiary-s: 1.625rem;
+    --font-size-title-semantic-tertiary-xs: 1.5rem;
+
+    /* Nested font sizes */
+    --font-size-xxs: var(--font-size-title-semantic-primary-xs);
+    --font-size-xs: var(--font-size-title-semantic-primary-s);
+    --font-size-s: var(--font-size-title-semantic-primary-m);
+    --font-size-ms: var(--font-size-title-semantic-primary-m);
+    --font-size-m: var(--font-size-title-semantic-primary-m);
+    --font-size-ml: var(--font-size-title-semantic-primary-l);
+    --font-size-l: var(--font-size-title-semantic-primary-l);
+    --font-size-xl: var(--font-size-title-semantic-primary-xl);
+    --font-size-xxl: var(--font-size-title-semantic-primary-xxl);
+    --font-size-xxxl: var(--font-size-title-semantic-primary-xxl);
+
+    /* Headings */
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.25rem;
+    --font-size-h5: 1.125rem;
+
+    /* Button Text */
+    --font-size-button-l: 1.25rem;
+    --font-size-button-m: 1rem;
+    --font-size-button-s: 0.875rem;
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 500;
+    --font-weight-bold: 600;
+    --font-weight-extra-bold: 700;
+
+    /* Spacing */
+    --spacing-none: 0;
+    --spacing-xxs: 2px;
+    --spacing-xs: 4px;
+    --spacing-xsii: 6px;
+    --spacing-s: 8px;
+    --spacing-sii: 12px;
+    --spacing-siii: 15px;
+    --spacing-m: 16px;
+    --spacing-mii: 18px;
+    --spacing-miii: 20px;
+    --spacing-l: 24px;
+    --spacing-lii: 28px;
+    --spacing-liii: 30px;
+    --spacing-xl: 32px;
+    --spacing-xlii: 36px;
+    --spacing-xxl: 40px;
+    --spacing-3xl: 48px;
+    --spacing-4xl: 56px;
+    --spacing-5xl: 64px;
+
+    /* Padding */
+    --padding-none: 0px;
+    --padding-xxs: 2px;
+    --padding-xs: 4px;
+    --padding-s: 8px;
+    --padding-m: 16px;
+    --padding-l: 24px;
+    --padding-xl: 32px;
+    --padding-xxl: 40px;
+    --padding-3xl: 48px;
+
+    /* Gap */
+    --gap-none: 0px;
+    --gap-xxs: 2px;
+    --gap-xs: 4px;
+    --gap-s: 8px;
+    --gap-sii: 12px;
+    --gap-m: 16px;
+    --gap-l: 24px;
+    --gap-xl: 32px;
+    --gap-xxl: 40px;
+    --gap-3xl: 48px;
+
+    /* Border Radius */
+    --border-radius-none: 0px;
+    --border-radius-xxs: 2px;
+    --border-radius-xs: 4px;
+    --border-radius-s: 8px;
+    --border-radius-m: 16px;
+    --border-radius-l: 24px;
+    --border-radius-xl: 24px;
+    --border-radius-round: 9999px;
+
+    /* Margins */
+    --margins-s: 16px;
+    --margins-m: 24px;
+    --margins-l: 24px;
+
+    /* Gutters */
+    --gutter-s: 16px;
+    --gutter-m: 24px;
+    --gutter-l: 24px;
+
+    /* Columns */
+    --columns-s: 8;
+    --columns-m: 12;
+    --columns-l: 12;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
-}
 
 body {
   display: none;
