@@ -65,6 +65,12 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "design-tokens",
+          "label": "Design Tokens",
+          "valueType": "string"
         }
       ]
     }

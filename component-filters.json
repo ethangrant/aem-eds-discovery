@@ -14,16 +14,8 @@
       "title",
       "hero",
       "cards",
-      "panels",
       "columns",
-      "fragment",
-      "banner",
-      "profile",
-      "menu",
-      "tabs",
-      "search",
-      "form",
-      "hero-heading"
+      "fragment"
     ]
   },
   {
@@ -45,24 +37,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "menu",
-    "components": [
-      "menu-item"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "tabs-item"
-    ]
-  },
-  {
-    "id": "panels",
-    "components": [
-      "panel-item"
     ]
   }
 ]
