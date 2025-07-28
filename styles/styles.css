@@ -11,55 +11,53 @@
  */
 :root {
     /* Colors Primary - OK - 1 query */
-    --color-primary-light-purple: rgba(167, 93, 214, 1);
-    --color-primary-light-purple-two: rgba(154, 83, 198, 1);
-    --color-primary-light-purple-10: rgba(244, 237, 249, 1);
-    --color-primary-dark-purple: rgba(43, 28, 69, 1);
-    --color-primary-cream: rgba(255, 236, 212, 1);
+    --color-primary-light-purple: rgb(167 93 214 / 100%);
+    --color-primary-light-purple-two: rgb(154 83 198 / 100%);
+    --color-primary-light-purple-10: rgb(244 237 249 / 100%);
+    --color-primary-dark-purple: rgb(43 28 69 / 100%);
+    --color-primary-cream: rgb(255 236 212 / 100%);
 
     /* !!not in style guide */
-    --color-purple: rgba(139, 50, 194, 1);
+    --color-purple: rgb(139 50 194 / 100%);
 
     /* Secondary - OK */
-    --color-secondary-light-red: rgba(255, 70, 21, 1);
-    --color-secondary-light-red-10: rgba(229, 4, 8, 1);
-    --color-secondary-light-red-20: rgba(251, 97, 97, 1);
-    --color-secondary-dark-red: rgba(224, 49, 0, 1);
-    --color-secondary-light-green: rgba(63, 182, 92, 1);
-    --color-secondary-dark-green: rgba(43, 125, 63, 1);
-    --color-secondary-yellow: rgba(255, 217, 0, 1);
-    --color-secondary-orange: rgba(253, 153, 65, 1);
-    --color-secondary-blue: rgba(63, 63, 235, 1);
-    --color-secondary-blue-10: rgba(57, 57, 211, 1);
-    --color-secondary-blue-20: rgba(50, 50, 188, 1);
-    --color-secondary-dark-blue: rgba(0, 73, 110, 1);
-    --color-secondary-dark-red-10: rgba(182, 40, 0, 1);
-    --color-secondary-dark-red-20: rgba(143, 31, 0, 1);
+    --color-secondary-light-red: rgb(255 70 21 / 100%);
+    --color-secondary-light-red-10: rgb(229 4 8 / 100%);
+    --color-secondary-light-red-20: rgb(251 97 97 / 100%);
+    --color-secondary-dark-red: rgb(224 49 0 / 100%);
+    --color-secondary-light-green: rgb(63 182 92 / 100%);
+    --color-secondary-dark-green: rgb(43 125 63 / 100%);
+    --color-secondary-yellow: rgb(255 217 0 / 100%);
+    --color-secondary-orange: rgb(253 153 65 / 100%);
+    --color-secondary-blue: rgb(63 63 235 / 100%);
+    --color-secondary-blue-10: rgb(57 57 211 / 100%);
+    --color-secondary-blue-20: rgb(50 50 188 / 100%);
+    --color-secondary-dark-blue: rgb(0 73 110 / 100%);
+    --color-secondary-dark-red-10: rgb(182 40 0 / 100%);
+    --color-secondary-dark-red-20: rgb(143 31 0 / 100%);
 
     /* Neutrals - OK - 1 query */
-    --color-neutral-black: rgba(0, 0, 0, 1);
-    --color-neutral-tundora: rgba(77, 77, 77, 1);
-    --color-neutral-gray: rgba(115, 115, 115, 1);
-    --color-neutral-gray-two: rgba(153, 153, 153, 1);
-    --color-neutral-silver: rgba(186, 186, 186, 1);
-    --color-neutral-silver-two: rgba(207, 208, 211, 1);
-    --color-neutral-alto: rgba(224, 224, 224, 1);
-    --color-neutral-light-gray: rgba(249, 249, 249, 1);
-    --color-neutral-mid-gray: rgba(234, 229, 232, 1);
-    --color-neutral-mid-gray-two: rgba(187, 187, 187, 1);
-    --color-neutral-white: rgba(255, 255, 255, 1);
+    --color-neutral-black: rgb(0 0 0 / 100%);
+    --color-neutral-tundora: rgb(77 77 77 / 100%);
+    --color-neutral-gray: rgb(115 115 115 / 100%);
+    --color-neutral-gray-two: rgb(153 153 153 / 100%);
+    --color-neutral-silver: rgb(186 186 186 / 100%);
+    --color-neutral-silver-two: rgb(207 208 211 / 100%);
+    --color-neutral-alto: rgb(224 224 224 / 100%);
+    --color-neutral-light-gray: rgb(249 249 249 / 100%);
+    --color-neutral-mid-gray: rgb(234 229 232 / 100%);
+    --color-neutral-mid-gray-two: rgb(187 187 187 / 100%);
+    --color-neutral-white: rgb(255 255 255 / 100%);
 
     /* !!not in style guide */
-    --color-neutral-gray-light: rgba(255, 255, 255, 0.30);
+    --color-neutral-gray-light: rgb(255 255 255 / 30%);
 
     /* Typography */
     --body-font-family: "Inner Tight", sans-serif;
     --heading-font-primary-family: "Rebond Grotesque", sans-serif;
-
     --font-size-base: 1rem;
     --font-size-small: 0.875rem;
     --font-size-x-small: 0.75rem;
-
     --line-height-default: 150%;
     --line-height-s: 120%;
     --line-height-xs: 100%;
@@ -77,21 +75,18 @@
     --font-size-title-display-tertiary-l: 4.5rem;
     --font-size-title-display-tertiary-m: 3.75rem;
     --font-size-title-display-tertiary-s: 3rem;
-
     --font-size-title-semantic-primary-xxl: 2rem;
     --font-size-title-semantic-primary-xl: 1.75rem;
     --font-size-title-semantic-primary-l: 1.5rem;
     --font-size-title-semantic-primary-m: 1.25rem;
     --font-size-title-semantic-primary-s: 1.125rem;
     --font-size-title-semantic-primary-xs: 1rem;
-
     --font-size-title-semantic-secondary-xxl: 2rem;
     --font-size-title-semantic-secondary-xl: 1.75rem;
     --font-size-title-semantic-secondary-l: 1.5rem;
     --font-size-title-semantic-secondary-m: 1.25rem;
     --font-size-title-semantic-secondary-s: 1.125rem;
     --font-size-title-semantic-secondary-xs: 1rem;
-
     --font-size-title-semantic-tertiary-xl: 2.75rem;
     --font-size-title-semantic-tertiary-l: 2rem;
     --font-size-title-semantic-tertiary-m: 1.75rem;
