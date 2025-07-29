@@ -1,7 +1,9 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
+import { readBlockConfig } from '../../scripts/aem.js';
 
 export default function decorate(block) {
+  debugger;
   /* change to ul, li */
   const ul = document.createElement('ul');
   ul.className = 'card-container grid-row';

@@ -10,7 +10,8 @@
             "template": {
               "name": "cards",
               "model": "cards",
-              "filter": "cards"
+              "filter": "cards",
+              "key-value": true
             }
           }
         }
