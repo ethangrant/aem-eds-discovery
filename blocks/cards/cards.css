@@ -1,27 +1,24 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+:root {
+  --card-header-color: black;
+  --card-text-size: 16px;
+  --card-text-color: #333;
+  --card-background-color: #fff;
+  --card-border-radius: 8px;
+  --card-border-color: black;
+  --card-border-width: 1px;
 }
 
-.cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+.card {
+  border: var(--card-border-width) solid var(--card-border-color);
+  background-color: var(--card-background-color);
+  border-radius: var(--card-border-radius);
 }
 
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
-}
-
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.card__body h1,
+.card__body h2,
+.card__body h3,
+.card__body h4,
+.card__body h5,
+.card__body h6 {
+  color: var(--card-header-color);
 }
