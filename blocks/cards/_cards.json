@@ -47,7 +47,7 @@
             {"name": "Article", "value": "article-cards"}
           ]
         },
-{
+  {
           "component": "richtext",
           "name": "design-tokens",
           "label": "Design Tokens",
