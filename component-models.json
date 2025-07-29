@@ -115,6 +115,29 @@
     "id": "cards",
     "fields": [
       {
+        "component": "select",
+        "name": "classes",
+        "label": "Card Type",
+        "options": [
+          {
+            "name": "Variation 1",
+            "value": "variation-1"
+          },
+          {
+            "name": "Variation 2",
+            "value": "variation-2"
+          },
+          {
+            "name": "Variation 3",
+            "value": "variation-3"
+          },
+          {
+            "name": "Variation 4",
+            "value": "variation-4"
+          }
+        ]
+      },
+      {
         "component": "richtext",
         "name": "design-tokens",
         "label": "Design Tokens",
