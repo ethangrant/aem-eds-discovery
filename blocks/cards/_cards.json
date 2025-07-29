@@ -46,6 +46,12 @@
             {"name": "Hub", "value": "hub-cards"},
             {"name": "Article", "value": "article-cards"}
           ]
+        },
+{
+          "component": "richtext",
+          "name": "design-tokens",
+          "label": "Design Tokens",
+          "valueType": "string"
         }
       ]
     },
@@ -64,12 +70,6 @@
           "name": "text",
           "value": "",
           "label": "Text",
-          "valueType": "string"
-        },
-        {
-          "component": "richtext",
-          "name": "design-tokens",
-          "label": "Design Tokens",
           "valueType": "string"
         }
       ]
