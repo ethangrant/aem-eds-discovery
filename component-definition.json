@@ -169,7 +169,6 @@
                 "template": {
                   "name": "html",
                   "model": "html",
-                  "filter": "html",
                   "key-value": true
                 }
               }
