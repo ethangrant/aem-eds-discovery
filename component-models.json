@@ -218,5 +218,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "html",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "html-richtext",
+        "label": "HTML Rich Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "html-text",
+        "label": "HTML Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
