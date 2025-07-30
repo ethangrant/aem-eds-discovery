@@ -73,5 +73,5 @@ const transformer = {
     ];
 
     return WebImporter.DOMUtils.createTable(cells, document);
-  }
-}
+  },
+};

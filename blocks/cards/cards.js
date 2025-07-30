@@ -1,9 +1,35 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
-import { readBlockConfig } from '../../scripts/aem.js';
+
+function extractDesignTokens(block) {
+  const designTokens = [...block.children].find((div) => div.textContent.includes('--tokens--'));
+
+  if (!designTokens) {
+    return [];
+  }
+  console.log(designTokens);
+
+  const regex = /--([\w-]+):\s*([^;]+);/g;
+  const tokens = [];
+  let match;
+
+  while ((match = regex.exec(designTokens.innerText)) !== null) {
+    const [_, key, value] = match;
+    tokens.push(`--${key}: ${value.trim()}`);
+  }
+
+  designTokens.remove();
+
+  return tokens;
+}
 
 export default function decorate(block) {
+  const designTokens = extractDesignTokens(block);
   debugger;
+  designTokens.forEach((token) => {
+    const [property, value] = token.split(':');
+    block.style.setProperty(property.trim(), value.trim());
+  });
   /* change to ul, li */
   const ul = document.createElement('ul');
   ul.className = 'card-container grid-row';

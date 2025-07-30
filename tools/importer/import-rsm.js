@@ -14,7 +14,9 @@
 
 export default {
 
-  preprocess: async ({ document, url, html, params }) => {
+  preprocess: async ({
+    document, url, html, params,
+  }) => {
     // Dynamic import is used as static import in this file breaks the custom import process.
     if (!WebImporter.BlockUtils) {
       WebImporter.BlockUtils = await import('./blocks.js');
