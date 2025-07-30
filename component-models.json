@@ -237,18 +237,18 @@
     ]
   },
   {
-    "id": "testblock",
+    "id": "htmlembed",
     "fields": [
       {
         "component": "richtext",
-        "name": "testblock-richtext",
-        "label": "Testblock Rich Text",
+        "name": "htmlembed-richtext",
+        "label": "HTML Embed Rich Text",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "testblock-text",
-        "label": "Testblock Text",
+        "name": "htmlembed-text",
+        "label": "HTML Embed Text",
         "valueType": "string"
       }
     ]
