@@ -220,35 +220,18 @@
     ]
   },
   {
-    "id": "html",
+    "id": "raw",
     "fields": [
       {
         "component": "richtext",
-        "name": "html-richtext",
-        "label": "HTML Rich Text",
+        "name": "raw-richtext",
+        "label": "Raw Rich Text",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "html-text",
-        "label": "HTML Text",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "htmlembed",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "htmlembed-richtext",
-        "label": "HTML Embed Rich Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "htmlembed-text",
-        "label": "HTML Embed Text",
+        "name": "raw-text",
+        "label": "Raw Text",
         "valueType": "string"
       }
     ]
