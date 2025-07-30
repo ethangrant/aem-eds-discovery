@@ -10,6 +10,8 @@
  * governing permissions and limitations under the License.
  */
 
+import { extractDesignTokens, applyDesignTokens } from './design-tokens.js';
+
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
@@ -619,6 +621,17 @@ function decorateBlock(block) {
     if (section) section.classList.add(`${shortBlockName}-container`);
     // eslint-disable-next-line no-use-before-define
     decorateButtons(block);
+
+    try {
+      // custom apply design tokens
+      const designTokens = extractDesignTokens(block);
+      if (designTokens.length > 0) {
+        applyDesignTokens(block, designTokens);
+      }
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Failed to apply design tokens for block with name', block.dataset.blockName, error);
+    }
   }
 }
 
