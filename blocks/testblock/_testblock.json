@@ -1,0 +1,41 @@
+{
+  "definitions": [
+    {
+      "title": "testblock",
+      "id": "testblock",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "testblock",
+              "model": "testblock",
+              "key-value": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "testblock",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "testblock-richtext",
+          "label": "Testblock Rich Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "testblock-text",
+          "label": "Testblock Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+  ]
+}

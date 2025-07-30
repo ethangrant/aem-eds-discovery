@@ -235,5 +235,22 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "testblock",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "testblock-richtext",
+        "label": "Testblock Rich Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "testblock-text",
+        "label": "Testblock Text",
+        "valueType": "string"
+      }
+    ]
   }
 ]
