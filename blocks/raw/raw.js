@@ -13,10 +13,10 @@ export default function decorate(block) {
       'b', 'i', 'em', 'strong', 'u',
       'p', 'br', 'ul', 'ol', 'li',
       'a', 'span', 'div', 'blockquote',
-      'code', 'pre'
+      'code', 'pre',
     ],
     ALLOWED_ATTR: [
-      'href', 'title', 'target', 'rel'
-    ]
+      'href', 'title', 'target', 'rel',
+    ],
   });
 }
