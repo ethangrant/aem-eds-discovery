@@ -113,7 +113,7 @@
               {
                 "name": "Left Sidebar",
                 "description": "Position section in the left sidebar",
-                "value": "lef-sidebar"
+                "value": "left-sidebar"
               },
               {
                 "name": "Main Content",
