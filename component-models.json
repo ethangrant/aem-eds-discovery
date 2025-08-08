@@ -106,6 +106,31 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Layout",
+            "children": [
+              {
+                "name": "Left Sidebar",
+                "description": "Position section in the left sidebar",
+                "value": "lef-sidebar"
+              },
+              {
+                "name": "Main Content",
+                "description": "Position section in main content area",
+                "value": "main-content"
+              },
+              {
+                "name": "Right Sidebar",
+                "description": "Position section in the right sidebar",
+                "value": "right-sidebar"
+              },
+              {
+                "name": "Below main content",
+                "description": "Position content below the main content area",
+                "value": "below-main-content"
+              }
+            ]
           }
         ]
       }
